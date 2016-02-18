@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">13</defaultcontrol>
+  <controls>
+	<visible>!Window.IsVisible(FileBrowser)</visible>
+	<include>BlackBackground</include>
+  
+    <control type="group">
+	  <posx>15</posx>
+	  <posy>80</posy>
+      <control type="group">
+        <control type="group" description="Group list">
+		  <animation condition="Control.HasFocus(13)" effect="fade" start="40" end="100" time="220">Conditional</animation>
+          <posx>60</posx>
+		  
+		  <include name="MenuBackground">
+			<param name="border" value="35" />
+			<param name="color" value="$VAR[MenuColor]" />
+			<param name="height" value="960" />
+			<param name="posx" value="-2" />
+			<param name="posy" value="50" />
+			<param name="width" value="464" />
+			<param name="condition" value="true"/>
+			
+			<param name="type0" value="false" description="MenuBackground"/>
+			<param name="type1" value="true" description="DialogBackground"/>
+		  </include>
+          <control type="label" description="title">
+            <posy>55</posy>
+            <width>460</width>
+            <height>60</height>
+            <include>LabelC1</include>
+            <label>19146</label>
+            <textcolor>white2</textcolor>
+          </control>
+          <control type="list" id="13" description="קבוצות ראשי">
+            <posy>110</posy>
+            <width>464</width>
+            <height>960</height>
+            <onup>13</onup>
+            <ondown>13</ondown>
+            <onleft condition="Control.IsVisible(60)">60</onleft>
+            <onright>11</onright>
+            <pagecontrol>60</pagecontrol>
+            <itemlayout height="70">
+			  <include name="Buttons_Frame">
+				<param name="id" value="" />
+				<param name="border" value="35" />
+				<param name="color" value="$VAR[ButtonUnFocusColor]" />
+				<param name="height" value="75" />
+				<param name="posx" value="0" />
+				<param name="posy" value="0" />
+				<param name="width" value="460" />
+			  </include>
+              <control type="label">
+                <posx>20</posx>
+                <width>460</width>
+                <height>75</height>
+                <font>size28</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>white</textcolor>
+                <selectedcolor>yellow</selectedcolor>
+                <info>ListItem.Label</info>
+              </control>
+            </itemlayout>
+            <focusedlayout height="70">
+              <include name="Buttons_Frame">
+				<param name="id" value="" />
+				<param name="border" value="35" />
+				<param name="color" value="$VAR[ButtonFocusColor]" />
+				<param name="height" value="75" />
+				<param name="posx" value="0" />
+				<param name="posy" value="0" />
+				<param name="width" value="460" />
+			  </include>
+              <control type="label">
+                <posx>20</posx>
+                <width>460</width>
+                <height>75</height>
+                <font>size28</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>white</textcolor>
+                <selectedcolor>yellow</selectedcolor>
+                <info>ListItem.Label</info>
+              </control>
+            </focusedlayout>
+          </control>
+        </control>
+        <control type="group" description="Channels list">
+          <animation condition="Control.HasFocus(11)" effect="fade" start="40" end="100" time="220">Conditional</animation>
+          <posx>560</posx>
+		  <include name="MenuBackground">
+			<param name="border" value="35" />
+			<param name="color" value="$VAR[MenuColor]" />
+			<param name="height" value="960" />
+			<param name="posx" value="-2" />
+			<param name="posy" value="50" />
+			<param name="width" value="464" />
+			<param name="condition" value="true"/>
+			
+			<param name="type0" value="false" description="MenuBackground"/>
+			<param name="type1" value="true" description="DialogBackground"/>
+		  </include>
+		  
+		  <control type="label" description="הצגת ערוצים מוסתרים">
+            <posy>55</posy>
+            <width>460</width>
+            <height>60</height>
+            <include>LabelC1</include>
+            <label>$LOCALIZE[19051]</label>
+            <textcolor>white2</textcolor>
+          </control>
+          <control type="list" id="11" description="רשימה שניה">
+            <posy>110</posy>
+            <width>460</width>
+            <height>960</height>
+            <onup>11</onup>
+            <ondown>11</ondown>
+            <onleft>13</onleft>
+            <onright>12</onright>
+            <pagecontrol>-</pagecontrol>
+            <itemlayout height="70">
+			  <include name="Buttons_Frame">
+				<param name="id" value="" />
+				<param name="border" value="35" />
+				<param name="color" value="$VAR[ButtonUnFocusColor]" />
+				<param name="height" value="75" />
+				<param name="posx" value="0" />
+				<param name="posy" value="0" />
+				<param name="width" value="460" />
+			  </include>
+              <control type="label">
+                <posx>10</posx>
+                <width>440</width>
+                <height>70</height>
+                <font>size24</font>
+                <align>left</align>
+                <textcolor>white</textcolor>
+                <label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
+              </control>
+              <control type="image">
+                <width>40</width>
+                <height>40</height>
+                <posx>470</posx>
+                <posy>10</posy>
+                <texture fallback="images/ThumbBorder3.png" border="3">$INFO[ListItem.Icon]</texture>
+              </control>
+            </itemlayout>
+            <focusedlayout height="70">
+              <include name="Buttons_Frame">
+				<param name="id" value="" />
+				<param name="border" value="35" />
+				<param name="color" value="$VAR[ButtonFocusColor]" />
+				<param name="height" value="75" />
+				<param name="posx" value="0" />
+				<param name="posy" value="0" />
+				<param name="width" value="460" />
+			  </include>
+              <control type="label">
+                <posx>10</posx>
+                <width>440</width>
+                <height>70</height>
+                <font>size24</font>
+                <align>left</align>
+                <textcolor>yellow</textcolor>
+                <label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
+              </control>
+              <control type="image">
+                <width>40</width>
+                <height>40</height>
+                <posx>470</posx>
+                <posy>10</posy>
+                <texture fallback="images/ThumbBorder3.png" border="3">$INFO[ListItem.Icon]</texture>
+              </control>
+            </focusedlayout>
+          </control>
+        </control>
+        <control type="group" description="Grouped Channels list">
+          <animation condition="Control.HasFocus(12)" effect="fade" start="40" end="100" time="220">Conditional</animation>
+		  <posx>1060</posx>
+		  <include name="MenuBackground">
+			<param name="border" value="35" />
+			<param name="color" value="$VAR[MenuColor]" />
+			<param name="height" value="960" />
+			<param name="posx" value="-2" />
+			<param name="posy" value="50" />
+			<param name="width" value="464" />
+			<param name="condition" value="true"/>
+			
+			<param name="type0" value="false" description="MenuBackground"/>
+			<param name="type1" value="true" description="DialogBackground"/>
+		  </include>
+          <control type="label" description="הצגת ערוצים גלויים">
+            <posy>55</posy>
+            <width>460</width>
+            <height>60</height>
+            <include>LabelC1</include>
+            <label>$LOCALIZE[19050]</label>
+            <textcolor>white2</textcolor>
+          </control>
+          <control type="list" id="12">
+            <posy>110</posy>
+            <width>460</width>
+            <height>960</height>
+            <onup>12</onup>
+            <ondown>12</ondown>
+            <onleft>11</onleft>
+            <onright>29</onright>
+            <pagecontrol>-</pagecontrol>
+            <itemlayout height="70">
+			  <include name="Buttons_Frame">
+				<param name="id" value="" />
+				<param name="border" value="35" />
+				<param name="color" value="$VAR[ButtonUnFocusColor]" />
+				<param name="height" value="75" />
+				<param name="posx" value="0" />
+				<param name="posy" value="0" />
+				<param name="width" value="460" />
+			  </include>
+              <control type="label">
+                <posx>10</posx>
+                <width>440</width>
+                <height>60</height>
+                <font>size26</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>grey2</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
+              </control>
+              <control type="image">
+                <width>40</width>
+                <height>40</height>
+                <posx>470</posx>
+                <posy>10</posy>
+                <texture fallback="images/ThumbBorder3.png" border="3">$INFO[ListItem.Icon]</texture>
+              </control>
+            </itemlayout>
+            <focusedlayout height="70">
+              <include name="Buttons_Frame">
+				<param name="id" value="" />
+				<param name="border" value="35" />
+				<param name="color" value="$VAR[ButtonFocusColor]" />
+				<param name="height" value="75" />
+				<param name="posx" value="0" />
+				<param name="posy" value="0" />
+				<param name="width" value="460" />
+			  </include>
+              <control type="label">
+                <posx>10</posx>
+                <width>440</width>
+                <height>60</height>
+                <font>size26</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>yellow</textcolor>
+                <label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
+              </control>
+              <control type="image">
+                <width>40</width>
+                <height>40</height>
+                <posx>470</posx>
+                <posy>10</posy>
+                <texture fallback="images/SliderWL.png" border="3">$INFO[ListItem.Icon]</texture>
+              </control>
+            </focusedlayout>
+          </control>
+        </control>
+      </control>
+    </control>
+	<control type="group" description="תפריט ימין (8999)">
+      <height>305</height>	  
+	  <posx>1600</posx>
+	  <posy>275</posy>	  
+	  <width>400</width>
+      <include name="MenuBackground">
+		<param name="border" value="40" />
+		<param name="color" value="$VAR[MenuColor]" />
+		<param name="height" value="0" />
+		<param name="posx" value="0" />
+		<param name="posy" value="0" />
+		<param name="width" value="0" />
+		<param name="condition" value="true"/>
+		
+		<param name="type0" value="true" description="MenuBackground"/>
+		<param name="type1" value="false" description="DialogBackground"/>
+	  </include>
+      <control type="grouplist" id="8999" description="קבוצה תפריט ימין">
+        <itemgap>0</itemgap>
+        <onleft>12</onleft>
+        <onright>noop</onright>
+        <onup>noop</onup>
+        <ondown>noop</ondown>
+        <orientation>Vertical</orientation>
+	    <control type="button" id="29" description="OK">
+          <label>186</label>
+		  <font>size28</font>
+		  <include>ButtonL1</include>
+        </control>
+		<control type="button" id="26" description="Add Group">
+          <label>$LOCALIZE[15019] $LOCALIZE[19141]</label>
+		  <font>size28</font>
+		  <include>ButtonL1</include>
+        </control>
+        <control type="button" id="27" description="Rename Group">
+          <label>$LOCALIZE[118] $LOCALIZE[19141]</label>
+		  <font>size28</font>
+		  <include>ButtonL1</include>
+        </control>
+        <control type="button" id="28" description="Delete">
+          <label>$LOCALIZE[117] $LOCALIZE[19141]</label>
+		  <font>size28</font>
+		  <include>ButtonL1</include>
+        </control>
+      </control>
+	</control>
+	
+	<include>ScrollBar</include>
+	<include>TopInformation</include>
+  </controls>
+</window>
