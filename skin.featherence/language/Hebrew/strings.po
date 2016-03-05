@@ -170,12 +170,12 @@ msgid "Buttons Shape"
 msgstr "צורת כפתורים"
 
 msgctxt "#31058"
-msgid ""
-msgstr ""
+msgid "Multi Fanart"
+msgstr "פאנארט מרובה"
 
 msgctxt "#31059"
-msgid ""
-msgstr ""
+msgid "Choose this option in order to allow more fanart per button."
+msgstr "בחר באפשרות זו בכדי לאפשר בחירה של נתיב עבור תמונות רקע מרובות."
 
 msgctxt "#31060"
 msgid "Show randomize tips on Dialog Busy window."
@@ -234,16 +234,16 @@ msgid "Number of items in the playlist"
 msgstr "כמות פריטים ברשימת ניגון"
 
 msgctxt "#31074"
-msgid ""
-msgstr ""
+msgid "Time per Image"
+msgstr "זמן להצגת כל תמונה"
 
 msgctxt "#31075"
-msgid ""
-msgstr ""
+msgid "Cross Fade Time"
+msgstr "זמן חפיפה בין תמונה לתמונה"
 
 msgctxt "#31076"
-msgid ""
-msgstr ""
+msgid "Your icons will be stretch on the entire button's frame."
+msgstr "הסמלים שלך יהיו בגודל של הכפתור עצמו."
 
 msgctxt "#31077"
 msgid ""
@@ -294,12 +294,12 @@ msgid ""
 msgstr ""
 
 msgctxt "#31089"
-msgid ""
-msgstr ""
+msgid "Choose YES and the thumbnail will be changed according to the selected action.[CR]In additional the button name will be change as well."
+msgstr "אם תבחר כן, כשתשנה פעולה לכפתור גם התמונה תשתנה בהתאם.[CR]בנוסף לתמונה גם השם כפתור ישתנה בהתאם."
 
 msgctxt "#31090"
-msgid ""
-msgstr ""
+msgid "Action and Thumbnail"
+msgstr "פעולה ותמונה"
 
 msgctxt "#31091"
 msgid "Choose this option in order to display fanart for sub menus's buttons."
@@ -513,7 +513,25 @@ msgctxt "#31418"
 msgid "Skin Version Updated"
 msgstr "גרסת מעטפת עודכנה"
 
+msgctxt "#31419"
+msgid "By"
+msgstr "לפי"
 
+msgctxt "#31420"
+msgid "Button"
+msgstr "כפתור"
+
+msgctxt "#31421"
+msgid "Welcome"
+msgstr "ברוך הבא"
+
+msgctxt "#31422"
+msgid "Choose a video file to be play on startup.[CR]Note: This feature trigger on AFK only."
+msgstr "בחר קובץ וידאו אשר יתנגן עם פתיחת המכשיר.[CR]הערה: פעולה זו אינה חלה במקרים בהם המשתמש נוגע במקשים."
+
+msgctxt "#31423"
+msgid "Play video in a full screen."
+msgstr "נגן וידאו במסך מלא."
 
 msgctxt "#31600"
 msgid "Action"

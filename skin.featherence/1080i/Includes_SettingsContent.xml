@@ -152,11 +152,7 @@
 		<onclick condition="Skin.String(MenuDesign,2)">Skin.SetString(MenuDesign,3)</onclick>
 		<onclick condition="Skin.String(MenuDesign,3)">Skin.SetString(MenuDesign,4)</onclick>
 		<onclick condition="Skin.String(MenuDesign,4)">Skin.SetString(MenuDesign,)</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<visible>Container(100).Hasfocus(20)</visible>
 	  </item>
 	  
@@ -171,11 +167,7 @@
 		<onclick condition="Skin.String(ButtonsDesign,2)">Skin.SetString(ButtonsDesign,3)</onclick>
 		<onclick condition="Skin.String(ButtonsDesign,3)">Skin.SetString(ButtonsDesign,4)</onclick>
 		<onclick condition="Skin.String(ButtonsDesign,4)">Skin.SetString(ButtonsDesign,)</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<visible>Container(100).Hasfocus(20)</visible>
 	  </item>
 	  
@@ -209,7 +201,7 @@
 	  </item>
 	  
 	  <item id="203" description="צללית (כפתור)">
-		<label>$LOCALIZE[31851] $ADDON[script.featherence.service 80]</label>
+		<label>$LOCALIZE[31851] $LOCALIZE[31420]</label>
 		<label2>$VAR[203label2]</label2>
 		<thumb>buttons/effects/shadow.png</thumb>
 		<property name="rinfo">$LOCALIZE[31833]</property>
@@ -218,7 +210,7 @@
 	  </item>
 	  
 	  <item id="204" description="שקופית (כפתור)">
-		<label>$LOCALIZE[31850] $ADDON[script.featherence.service 80]</label>
+		<label>$LOCALIZE[31850] $LOCALIZE[31420]</label>
 		<label2>$VAR[204label2]</label2>
 		<thumb>buttons/effects/gardient.png</thumb>
 		<property name="rinfo">$LOCALIZE[31834]</property>
@@ -227,7 +219,7 @@
 	  </item>
 	  
 	  <item id="205" description="שפוע Bevel (כפתור)">
-		<label>$LOCALIZE[31823] $ADDON[script.featherence.service 80]</label>
+		<label>$LOCALIZE[31823] $LOCALIZE[31420]</label>
 		<label2>$VAR[205label2]</label2>
 		<thumb>buttons/effects/bevel.png</thumb>
 		<property name="rinfo"></property>
@@ -235,7 +227,7 @@
 		<visible>Container(100).Hasfocus(20)</visible>
 	  </item>
 	  <item id="206" description="מסגרת Stroke (כפתור)">
-		<label>$LOCALIZE[31824] $ADDON[script.featherence.service 80]</label>
+		<label>$LOCALIZE[31824] $LOCALIZE[31420]</label>
 		<label2>$VAR[206label2]</label2>
 		<thumb>buttons/effects/stroke.png</thumb>
 		<property name="rinfo"></property>
@@ -321,6 +313,15 @@
 		<visible>![Skin.String(MenuDesign,0) | Skin.String(MenuDesign,1)]</visible>
 	  </item>
 	  
+	  <item id="217" description="סמלים גדולים">
+		<label>$LOCALIZE[538]</label>
+		<label2>$VAR[217label2]</label2>
+		<thumb>special://home/addons/script.featherence.service/resources/icons/cubes.png</thumb>
+		<property name="rinfo"> $LOCALIZE[31093]</property>
+		<onclick>Skin.ToggleSetting(BigHomeIcons)</onclick>
+		<visible>Container(100).Hasfocus(20)</visible>
+	  </item>
+	  
 	  <item id="218" description="שקיפות (סמן תפריט משני)">
 		<label>$LOCALIZE[31849] ($LOCALIZE[31801])</label>
 		<label2>$INFO[Skin.String(SubMenuMarkOverlay)]</label2>
@@ -338,11 +339,7 @@
 		<onclick condition="Skin.String(SubMenuMarkOverlay, 40)">Skin.SetString(SubMenuMarkOverlay, 30)</onclick>
 		<onclick condition="Skin.String(SubMenuMarkOverlay, 30)">Skin.SetString(SubMenuMarkOverlay, 20)</onclick>
 		<onclick condition="Skin.String(SubMenuMarkOverlay, 20)">Skin.SetString(SubMenuMarkOverlay, )</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<visible>Container(100).Hasfocus(20)</visible>
 	  </item>
 	  
@@ -385,10 +382,7 @@
 		<onclick condition="Skin.String(BackgroundOverlay, 40)">Skin.SetString(BackgroundOverlay, 30)</onclick>
 		<onclick condition="Skin.String(BackgroundOverlay, 30)">Skin.SetString(BackgroundOverlay, 20)</onclick>
 		<onclick condition="Skin.String(BackgroundOverlay, 20)">Skin.SetString(BackgroundOverlay, )</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<visible>Container(100).Hasfocus(28)</visible>
 	  </item>
 	  
@@ -430,10 +424,7 @@
 		<onclick condition="Skin.String(TopMainBackgroundOverlay, 40)">Skin.SetString(TopMainBackgroundOverlay, 30)</onclick>
 		<onclick condition="Skin.String(TopMainBackgroundOverlay, 30)">Skin.SetString(TopMainBackgroundOverlay, 20)</onclick>
 		<onclick condition="Skin.String(TopMainBackgroundOverlay, 20)">Skin.SetString(TopMainBackgroundOverlay, )</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<visible>Container(100).Hasfocus(28)</visible>
 		<visible>Skin.HasSetting(HideTopMainBackground)</visible>
 	  </item>
@@ -450,7 +441,7 @@
 	  
 	  <item id="227" description="טקסטורה רקע פאנארט">
 		<label>$LOCALIZE[31841] $LOCALIZE[20445] $LOCALIZE[33068]</label>
-		<label2>$VAR[237label2]</label2>
+		<label2>$VAR[227label2]</label2>
 		<thumb></thumb>
 		<property name="rinfo"></property>
 		<onclick condition="!Skin.String(TopBackgroundTexture)">Skin.SetString(TopBackgroundTexture,1)</onclick>
@@ -489,10 +480,7 @@
 		<onclick condition="Skin.String(MainBackgroundOverlay, 40)">Skin.SetString(MainBackgroundOverlay, 30)</onclick>
 		<onclick condition="Skin.String(MainBackgroundOverlay, 30)">Skin.SetString(MainBackgroundOverlay, 20)</onclick>
 		<onclick condition="Skin.String(MainBackgroundOverlay, 20)">Skin.SetString(MainBackgroundOverlay, )</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<visible>Container(100).Hasfocus(28)</visible>
 		<visible>Skin.HasSetting(HideTopMainBackground)</visible>
 	  </item>
@@ -521,7 +509,67 @@
 		<onclick condition="Skin.String(MainBackgroundTexture,NONE)">Skin.SetString(MainBackgroundTexture,)</onclick>
 		<visible>Container(100).Hasfocus(28)</visible>
 	  </item>
-
+	  
+	  <item id="237" description="פאנארט מרובה">
+		<label>$LOCALIZE[31058]</label>
+		<label2>$VAR[237label2]</label2>
+		<thumb></thumb>
+		<property name="rinfo">$LOCALIZE[31059] $VAR[229label2]</property>
+		<onclick>Skin.ToggleSetting(MultiFanart)</onclick>
+		<visible>Container(100).Hasfocus(28)</visible>
+	  </item>
+	  
+	  <item id="238" description="זמן להצגת כל תמונה">
+		<visible>Skin.HasSetting(MultiFanart)</visible>
+		
+		<label>$LOCALIZE[31074]</label>
+		<label2>$INFO[Skin.String(MultiFanart_TimePerImage)]</label2>
+		<thumb></thumb>
+		<property name="rinfo">$VAR[238label2]</property>
+		<onclick condition="!Skin.String(MultiFanart_TimePerImage) | !IntegerGreatherThan(Skin.String(MultiFanart_TimePerImage),4000)">Skin.SetString(MultiFanart_TimePerImage, 5000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 5000)">Skin.SetString(MultiFanart_TimePerImage, 10000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 10000)">Skin.SetString(MultiFanart_TimePerImage, 15000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 15000)">Skin.SetString(MultiFanart_TimePerImage, 20000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 20000)">Skin.SetString(MultiFanart_TimePerImage, 25000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 25000)">Skin.SetString(MultiFanart_TimePerImage, 30000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 30000)">Skin.SetString(MultiFanart_TimePerImage, 35000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 35000)">Skin.SetString(MultiFanart_TimePerImage, 40000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 40000)">Skin.SetString(MultiFanart_TimePerImage, 45000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 45000)">Skin.SetString(MultiFanart_TimePerImage, 50000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 50000)">Skin.SetString(MultiFanart_TimePerImage, 55000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 55000)">Skin.SetString(MultiFanart_TimePerImage, 60000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_TimePerImage, 60000)">Skin.SetString(MultiFanart_TimePerImage, )</onclick>
+		<!--<include>CustomizerExit</include>-->
+		<visible>Container(100).Hasfocus(28)</visible>
+		<visible>false</visible>
+	  </item>
+	  
+	  <item id="239" description="זמן מעבר בין כל תמונה">
+		<visible>Skin.HasSetting(MultiFanart)</visible>
+		
+		<label>$LOCALIZE[31075]</label>
+		<label2>$INFO[Skin.String(MultiFanart_FadeTime)]</label2>
+		<thumb></thumb>
+		<property name="rinfo">$VAR[239label2]</property>
+		<onclick condition="!Skin.String(MultiFanart_FadeTime)">Skin.SetString(MultiFanart_FadeTime, 2000)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 10)">Skin.SetString(MultiFanart_FadeTime, 5)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 5)">Skin.SetString(MultiFanart_FadeTime, 10)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 10)">Skin.SetString(MultiFanart_FadeTime, 15)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 15)">Skin.SetString(MultiFanart_FadeTime, 20)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 20)">Skin.SetString(MultiFanart_FadeTime, 25)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 25)">Skin.SetString(MultiFanart_FadeTime, 30)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 30)">Skin.SetString(MultiFanart_FadeTime, 35)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 35)">Skin.SetString(MultiFanart_FadeTime, 40)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 40)">Skin.SetString(MultiFanart_FadeTime, 45)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 45)">Skin.SetString(MultiFanart_FadeTime, 50)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 50)">Skin.SetString(MultiFanart_FadeTime, 55)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 55)">Skin.SetString(MultiFanart_FadeTime, 60)</onclick>
+		<onclick condition="Skin.String(MultiFanart_FadeTime, 60)">Skin.SetString(MultiFanart_FadeTime, )</onclick>
+		<!--<include>CustomizerExit</include>-->
+		<visible>Container(100).Hasfocus(28)</visible>
+		<visible>false</visible>
+	  </item>
+	  
 	  <!--270-289 כפתורי תפריט-->
 	  <item id="270" description="רקע תפריט">
 		<label>$LOCALIZE[19190] $LOCALIZE[33061]</label>
@@ -550,10 +598,7 @@
 		<onclick condition="Skin.String(MenuBackgroundOverlay, 40)">Skin.SetString(MenuBackgroundOverlay, 30)</onclick>
 		<onclick condition="Skin.String(MenuBackgroundOverlay, 30)">Skin.SetString(MenuBackgroundOverlay, 20)</onclick>
 		<onclick condition="Skin.String(MenuBackgroundOverlay, 20)">Skin.SetString(MenuBackgroundOverlay, )</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<visible>Container(100).Hasfocus(21)</visible>
 	  </item>
 	  <item id="272" description="צבע רקע תפריט">
@@ -658,10 +703,7 @@
 		<onclick condition="Skin.String(DialogBackgroundOverlay, 40)">Skin.SetString(DialogBackgroundOverlay, 30)</onclick>
 		<onclick condition="Skin.String(DialogBackgroundOverlay, 30)">Skin.SetString(DialogBackgroundOverlay, 20)</onclick>
 		<onclick condition="Skin.String(DialogBackgroundOverlay, 20)">Skin.SetString(DialogBackgroundOverlay, )</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<onclick condition="!Window.IsVisible(DialogKaiToast.xml)">RunScript(script.featherence.service,,?mode=32&amp;value=2)</onclick>
 		<visible>Container(100).Hasfocus(22)</visible>
 	  </item>
@@ -672,7 +714,7 @@
 		<property name="rinfo">$LOCALIZE[31844] $LOCALIZE[10100], $LOCALIZE[10101], $LOCALIZE[12000], $LOCALIZE[12002]..</property>
 		<onclick condition="!Window.IsVisible(DialogKaiToast.xml)">RunScript(script.featherence.service,,?mode=32&amp;value=2)</onclick>
 		<onclick>SetProperty(TEMP,MenuColor,home)</onclick>
-		<onclick>AlarmClock(menucolor,ActivateWindow(1170),00:01,silent)</onclick>
+		
 		<onclick condition="!Window.IsVisible(DialogKaiToast.xml)">RunScript(script.featherence.service,,?mode=32&amp;value=2)</onclick>
 		<visible>Container(100).Hasfocus(22)</visible>
 	  </item>
@@ -710,10 +752,7 @@
 		<onclick condition="Skin.String(TopInformationOverlay, 40)">Skin.SetString(TopInformationOverlay, 30)</onclick>
 		<onclick condition="Skin.String(TopInformationOverlay, 30)">Skin.SetString(TopInformationOverlay, 20)</onclick>
 		<onclick condition="Skin.String(TopInformationOverlay, 20)">Skin.SetString(TopInformationOverlay, )</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<visible>Container(100).Hasfocus(26)</visible>
 	  </item>
 	  <item id="322" description="צבע פס עליון">
@@ -743,10 +782,7 @@
 		<onclick condition="Skin.String(TopVideoInformationOverlay, 40)">Skin.SetString(TopVideoInformationOverlay, 30)</onclick>
 		<onclick condition="Skin.String(TopVideoInformationOverlay, 30)">Skin.SetString(TopVideoInformationOverlay, 20)</onclick>
 		<onclick condition="Skin.String(TopVideoInformationOverlay, 20)">Skin.SetString(TopVideoInformationOverlay, )</onclick>
-		<onclick>Close</onclick>
-		<onclick>Close</onclick>
-		<onclick>ActivateWindow(1117)</onclick>
-		<onclick>AlarmClock(1173,ActivateWindow(1173),0,silent)</onclick>
+		<include>CustomizerExit</include>
 		<visible>Container(100).Hasfocus(26)</visible>
 	  </item>
 	  <item id="327" description="צבע פרטי וידאו">
@@ -881,6 +917,15 @@
 		<thumb>special://home/addons/script.featherence.service/resources/icons/q3r.png</thumb>
 		<property name="rinfo">$LOCALIZE[31068]</property>
 		<onclick>Skin.ToggleSetting(DefaultActionButtons)</onclick>
+		<visible>Container(100).Hasfocus(25)</visible>
+	  </item>
+	  
+	  <item id="399" description="Action and Thumbnail">
+		<label>$LOCALIZE[31090]</label>
+		<label2>$VAR[399label2]</label2>
+		<thumb>special://home/addons/script.featherence.service/resources/icons/q3r.png</thumb>
+		<property name="rinfo">$LOCALIZE[31089]</property>
+		<onclick>Skin.ToggleSetting(Action_Thumbnail)</onclick>
 		<visible>Container(100).Hasfocus(25)</visible>
 	  </item>
 	  
@@ -1021,7 +1066,8 @@
 		<property name="rinfo">$LOCALIZE[31847] $LOCALIZE[221].[CR][CR]Your IP: $INFO[Network.IPAddress]</property>
 		<onclick>RunScript(script.featherence.service,,?mode=41)</onclick>
 		<visible>Container(100).Hasfocus(2)</visible>
-		<visible></visible>
+		<visible>System.Platform.Linux | System.Platform.Linux.RaspberryPi</visible>
+		<visible>System.HasAddon(service.openelec.settings)</visible>
 	  </item>
 	  <item id="22" description="הגדרת שלט טלוויזיה">
 		<label>$ADDON[script.featherence.service 32066]</label>
@@ -1230,15 +1276,14 @@
 		<label2>$VAR[19label2]</label2>
 		<thumb>icons/music.png</thumb>
 		<property name="rinfo">$LOCALIZE[31816]</property>
-		<onclick condition="Skin.String(StartUpMusic)">Skin.SetString(StartUpMusic,)</onclick>
-		<onclick condition="!Skin.String(StartUpMusic)">Skin.SetFile(StartUpMusic,,special://userdata/library/music/)</onclick>
+		<onclick>RunScript(script.featherence.service,,?mode=22&amp;value=$LOCALIZE[2] $LOCALIZE[19107] $LOCALIZE[31856]+&amp;value2=Choose File for single audio or Path for multi audios&amp;value3=File&amp;value4=Path&amp;value5=StartUpMusic&amp;value6=music)</onclick>
 		<visible>Container(100).Hasfocus(1) + !Skin.HasSeting(StartUpMusic)</visible>
 	  </item>
 	  <item id="20" description="וידאו בהפעלה">
 		<label>$LOCALIZE[10025] $LOCALIZE[19107] $LOCALIZE[31856]</label>
 		<label2>$VAR[20label2]</label2>
 		<thumb>special://home/addons/script.featherence.service/resources/icons/videos.png</thumb>
-		<property name="rinfo">$ADDON[script.featherence.service 82]</property>
+		<property name="rinfo">$LOCALIZE[31422]</property>
 		<onclick condition="Skin.String(StartUpVideo)">Skin.SetString(StartUpVideo,)</onclick>
 		<onclick condition="!Skin.String(StartUpVideo)">Skin.SetFile(StartUpVideo,,special://userdata/library/videos/)</onclick>
 		<onclick>Skin.SetString(StartUpVideo)</onclick>
@@ -1248,7 +1293,7 @@
 		<label>$LOCALIZE[10025] $LOCALIZE[19107] $LOCALIZE[31856] - $LOCALIZE[244]</label>
 		<label2>$VAR[21label2]</label2>
 		<thumb>special://home/addons/script.featherence.service/resources/icons/fullscreen.png</thumb>
-		<property name="rinfo">$ADDON[script.featherence.service 83]</property>
+		<property name="rinfo">$LOCALIZE[31423]</property>
 		<onclick>Skin.ToggleSetting(StartUpVideoFullScreen)</onclick>
 		<visible>Container(100).Hasfocus(1) + Skin.String(StartUpVideo)</visible>
 	  </item>
@@ -1275,8 +1320,8 @@
 		<label>$LOCALIZE[10005] $LOCALIZE[19107] $LOCALIZE[13317] $LOCALIZE[1397] $LOCALIZE[360]</label>
 		<label2>$VAR[36label2]</label2>
 		<thumb>special://home/addons/script.featherence.service/resources/icons/music.png</thumb>
-		<property name="rinfo"></property>
-		<onclick>RunScript(script.featherence.service,,?mode=22)</onclick>
+		<property name="rinfo">$INFO[Skin.String(screensavermusic)]</property>
+		<onclick>RunScript(script.featherence.service,,?mode=22&amp;value=$LOCALIZE[10005] $LOCALIZE[19107] $LOCALIZE[13317] $LOCALIZE[1397] $LOCALIZE[360]&amp;value2=Choose File for single audio or Path for multi audios&amp;value3=File&amp;value4=Path&amp;value5=screensavermusic&amp;value6=music)</onclick>
 		<visible>Container(100).Hasfocus(1)</visible>
 		<visible></visible>
 	  </item>

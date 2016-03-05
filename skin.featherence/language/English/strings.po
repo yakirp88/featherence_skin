@@ -170,11 +170,11 @@ msgid "Buttons Shape"
 msgstr ""
 
 msgctxt "#31058"
-msgid ""
+msgid "Multi Fanart"
 msgstr ""
 
 msgctxt "#31059"
-msgid ""
+msgid "Choose this option in order to allow more fanart per button."
 msgstr ""
 
 msgctxt "#31060"
@@ -234,15 +234,15 @@ msgid "Number of items in the playlist"
 msgstr ""
 
 msgctxt "#31074"
-msgid ""
+msgid "Time per Image"
 msgstr ""
 
 msgctxt "#31075"
-msgid ""
+msgid "Cross Fade Time"
 msgstr ""
 
 msgctxt "#31076"
-msgid ""
+msgid "Your icons will be stretch on the entire button's frame."
 msgstr ""
 
 msgctxt "#31077"
@@ -294,11 +294,11 @@ msgid ""
 msgstr ""
 
 msgctxt "#31089"
-msgid ""
+msgid "Choose YES and the thumbnail will be changed according to the selected action.[CR]In additional the button name will be change as well."
 msgstr ""
 
 msgctxt "#31090"
-msgid ""
+msgid "Action and Thumbnail"
 msgstr ""
 
 msgctxt "#31091"
@@ -513,7 +513,25 @@ msgctxt "#31418"
 msgid "Skin Version Updated"
 msgstr ""
 
+msgctxt "#31419"
+msgid "By"
+msgstr ""
 
+msgctxt "#31420"
+msgid "Button"
+msgstr ""
+
+msgctxt "#31421"
+msgid "Welcome"
+msgstr ""
+
+msgctxt "#31422#
+msgid "Choose a video file to be play on startup.[CR]Note: This feature trigger on AFK only."
+msgstr ""
+
+msgctxt "#31423#
+msgid "Play video in a full screen."
+msgstr ""
 
 msgctxt "#31600"
 msgid "Action"

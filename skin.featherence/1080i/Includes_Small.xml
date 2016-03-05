@@ -162,6 +162,17 @@
   <include name="AutoScrollText2" description="(Textbox) (הגדרות מעטפת/עזרה)">
 	<autoscroll tween="sine" easing="out" delay="7000" time="3000" repeat="7000">True</autoscroll>
   </include>
+  <include name="CustomizerExit">
+    <!--<onclick condition="!IsEmpty(Window(home).Property(Button.ID))">AlarmClock(buttonid,SetProperty(Button.ID,$INFO[Window(home).Property(Button.ID)],home),00:01,silent)</onclick>
+	<onclick condition="!IsEmpty(Window(home).Property(Button.ID))">Notification(1,1,1000)</onclick>
+	<onclick condition="!IsEmpty(Window(home).Property(Button.ID_))">AlarmClock(buttonid,SetProperty(Button.ID_,$INFO[Window(home).Property(Button.ID_)],home),00:01,silent)</onclick>
+	<onclick condition="!IsEmpty(Window(home).Property(Button.Name))">SetProperty(Button.Name,$INFO[Window(home).Property(Button.Name)],home)</onclick>
+    <onclick>dialog.close(1173)</onclick>
+	<onclick>Close</onclick>
+	<onclick>ActivateWindow(1117)</onclick>
+	<onclick>ActivateWindow(1173)</onclick>-->
+	<onclick>RunScript(script.featherence.service,,?mode=32&amp;value=6)</onclick>
+  </include>
   <include name="Backgrounds1" description="בית">
 	<control type="group">
 	  <include>Slide1.5</include>
@@ -199,7 +210,35 @@
 		<height>1080</height>
 		<width>1920</width>
 		<visible>!Player.HasVideo | [Skin.String(MenuDesign,0) | Skin.String(MenuDesign,1)] + Skin.HasSetting(HomeFanartHalfScreen)</visible>
+		<visible>false</visible>
 	  </control>
+	  <control type="multiimage" description="רקע פאנארט">
+	    <fadetime>200</fadetime>
+	    <animation condition="!Skin.HasSetting(HomeFanartHalfScreen) + [Skin.String(MenuDesign,0) | Skin.String(MenuDesign,1)]" effect="zoom" start="100,100" end="100,51" time="0">Conditional</animation>
+		<animation condition="!Skin.HasSetting(HomeFanartHalfScreen) + [Skin.String(MenuDesign,2) | Skin.String(MenuDesign,3) | !Skin.String(MenuDesign)]" effect="zoom" start="100,100" end="100,74.1" time="0">Conditional</animation>
+		<animation description="No full Fanart-Vertical_he" condition="[!Skin.HasSetting(HomeFanartHalfScreen) + ![Control.HasFocus(311) | Control.HasFocus(312) | ControlGroup(9009).HasFocus + Window.IsVisible(Home.xml)]] + Skin.String(MenuDesign,4) + StringCompare(System.Language,Hebrew)" effect="zoom" center="0,0" start="100,100" end="86.3,100" time="0">Conditional</animation>
+		<animation description="No full Fanart-Vertical_en" condition="[!Skin.HasSetting(HomeFanartHalfScreen) + ![Control.HasFocus(311) | Control.HasFocus(312) | ControlGroup(9009).HasFocus + Window.IsVisible(Home.xml)]] + Skin.String(MenuDesign,4) + !StringCompare(System.Language,Hebrew)" effect="zoom" center="1920,0" start="100,100" end="86.3,100" time="0">Conditional</animation>
+	    <animation description="Slide-Panel" condition="[Skin.String(MenuDesign,0) | Skin.String(MenuDesign,1)] + [[!Container(9000).Row(0) + !Container(9000).Row(1) | Container(9000).HasPrevious()] | [[Container(9000).Row(0) | Container(9000).Row(1)] + !Container(9000).HasPrevious() + Player.HasVideo]]" effect="slide" start="0,0" end="0,551" time="220">Conditional</animation>
+		<animation description="Slide-Horizontal" condition="![Skin.String(MenuDesign,0) | Skin.String(MenuDesign,1)] + Player.HasVideo" effect="slide" start="0,0" end="0,551" time="220">Conditional</animation>
+		<animation condition="[Skin.String(MenuDesign,0) | Skin.String(MenuDesign,1)] + [[!Container(9000).Row(0) + !Container(9000).Row(1) | Container(9000).HasPrevious()] | Player.HasVideo] + !Skin.HasSetting(HomeFanartHalfScreen)" effect="fade" start="100" end="0" time="220">Conditional</animation>
+		<aspectratio align="top">scale</aspectratio>
+		<!--<visible>[[Container(9000).Row(0) | Container(9000).Row(1)] + !Container(9000).HasPrevious()] | [Container(50).Row(0) | Container(50).Row(1)] + !Container(50).HasPrevious()</visible>-->
+		<include>Fade_BackgroundOverlay</include>
+		<!--<fadetime>$INFO[Skin.String(MultiFanart_FadeTime)]</fadetime>
+		<timeperimage>$INFO[Skin.String(MultiFanart_TimePerImage)]</timeperimage>-->
+		<imagepath>$VAR[background]</imagepath>
+		<timeperimage>10000</timeperimage>
+
+		<!--<include>MultiFanart_TimePerImage_</include>-->
+		
+		<randomize>true</randomize>
+		<posy>0</posy>
+		<height>1080</height>
+		<width>1920</width>
+		
+		<visible>!Player.HasVideo | [Skin.String(MenuDesign,0) | Skin.String(MenuDesign,1)] + Skin.HasSetting(HomeFanartHalfScreen)</visible>
+		<visible>!Skin.HasSetting(background)</visible>
+	  </control>	
 	  <control type="image" description="רקע תחתון צבע">
 		<!--<visible>Skin.HasSetting(background)</visible>-->
 		<animation condition="[!Container(9000).Row(0) + !Container(9000).Row(1) | Container(9000).HasPrevious()] + [Skin.String(MenuDesign,0) | Skin.String(MenuDesign,1)]" effect="slide" start="0,0" end="0,29" time="220">Conditional</animation>
@@ -492,6 +531,7 @@
 	  <animation condition="!Control.IsVisible(601)" effect="slide" start="0,0" end="-50,0" time="0">Conditional</animation>
 	  <animation condition="!Control.IsVisible(602)" effect="slide" start="0,0" end="-50,0" time="0">Conditional</animation>
 	  
+	  <animation condition="Control.IsVisible(611)" effect="slide" start="0,0" end="100,0" time="0">Conditional</animation>
 	  <animation condition="Control.IsVisible(613)" effect="slide" start="0,0" end="50,0" time="0">Conditional</animation>
 	  <animation condition="Control.IsVisible(699)" effect="slide" start="0,0" end="50,0" time="0">Conditional</animation>
 	  <animation condition="Control.IsVisible(701)" effect="slide" start="0,0" end="50,0" time="0">Conditional</animation>
@@ -928,7 +968,7 @@
 	<visible>!Skin.String(TopInformationIcons, 0)</visible>
 	<control type="image" id="820" description="Weather">
 	  <include>Control_Pos7</include>
-	  <texture>special://home/addons/resource.images.weathericons.outline/resources/$INFO[Weather.fanartcode].png</texture>
+	  <texture>special://skin/extras/resource.images.weathericons.outline/resources/$INFO[Weather.fanartcode].png</texture>
 	  <visible>!Skin.String(TopInformationIcons) | SubString(Skin.String(TopInformationIcons),1)</visible>
 	</control>
 	<control type="label" id="821" description="Weather">
